@@ -110,11 +110,17 @@ export const portfolio = {
     'Tools': ['Microsoft Excel', 'Power BI'],
   },
   certifications: [
-    'Google Analytics',
-    'Microsoft Excel (VBA)',
-    'Harvard Management – Negotiating',
-    'Inbound Marketing (HubSpot)',
-    'Marketing Strategy (Coursera)',
+    { title: 'Business Plan Development', issuer: 'Harvard Business Impact · HBI Education', date: 'Oct 2026', file: 'business-plan-development.pdf' },
+    { title: 'Marketing Strategy Capstone Project', issuer: 'IE Business School · Coursera', date: 'Sep 2026', file: 'marketing-strategy-capstone-project.pdf' },
+    { title: 'The Marketing Plan', issuer: 'IE Business School · Coursera', date: 'Sep 2026', file: 'the-marketing-plan.pdf' },
+    { title: 'Marketing Mix Fundamentals', issuer: 'IE Business School · Coursera', date: 'Sep 2026', file: 'marketing-mix-fundamentals.pdf' },
+    { title: 'Positioning: What you need for a successful Marketing Strategy', issuer: 'IE Business School · Coursera', date: 'Sep 2026', file: 'positioning-marketing-strategy.pdf' },
+    { title: 'Inbound Marketing', issuer: 'HubSpot Academy', date: 'Sep 2026', file: 'inbound-marketing.png' },
+    { title: 'Market Research and Consumer Behavior', issuer: 'IE Business School · Coursera', date: 'Aug 2026', file: 'market-research-consumer-behavior.pdf' },
+    { title: 'Decision Making', issuer: 'Harvard Business Impact · HBI Education', date: 'Aug 2026', file: 'decision-making.pdf' },
+    { title: 'Negotiating', issuer: 'Harvard Business Impact · HBI Education', date: 'Aug 2026', file: 'negotiating.pdf' },
+    { title: 'Google Analytics', issuer: '', date: '', file: null },
+    { title: 'Microsoft Excel (VBA)', issuer: '', date: '', file: null },
   ],
   leadership: [
     {

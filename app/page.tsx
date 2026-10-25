@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import {
   ArrowDown,
@@ -177,7 +178,17 @@ export default function Home() {
         <div className="side-label side-label-left hidden xl:block">Education</div>
         <div className="mx-auto w-full max-w-6xl">
           <SectionHeader title="Education & Certifications" subtitle="Marketing studies grounded in pharmacy and continued learning." />
-          <div className="grid gap-7 lg:grid-cols-[1.3fr_.7fr]"><div className="space-y-4">{portfolio.education.map((item) => <article key={item.degree} className="glass rounded-2xl p-5 sm:p-6"><div className="flex items-start gap-4"><GraduationCap className="mt-1 h-6 w-6 shrink-0 text-primary" /><div className="flex-1"><div className="flex flex-wrap justify-between gap-2"><h3 className="text-lg font-bold">{item.degree}</h3><span className="text-sm text-primary">{item.period}</span></div><p className="mt-1 text-sm text-muted-foreground">{item.school}{item.location && ` · ${item.location}`}</p><p className="mt-2 text-sm text-foreground/75">{item.result}</p></div></div></article>)}</div><aside className="glass h-fit rounded-2xl p-6"><h3 className="mb-5 text-xl font-bold text-gradient">Certifications</h3><ul className="space-y-3">{portfolio.certifications.map((certification) => <li key={certification} className="border-b border-white/10 pb-3 text-sm text-foreground/80 last:border-0">{certification}</li>)}</ul></aside></div>
+          <div className="grid gap-7 lg:grid-cols-[1.3fr_.7fr]">
+            <div className="space-y-4">{portfolio.education.map((item) => <article key={item.degree} className="glass rounded-2xl p-5 sm:p-6"><div className="flex items-start gap-4"><GraduationCap className="mt-1 h-6 w-6 shrink-0 text-primary" /><div className="flex-1"><div className="flex flex-wrap justify-between gap-2"><h3 className="text-lg font-bold">{item.degree}</h3><span className="text-sm text-primary">{item.period}</span></div><p className="mt-1 text-sm text-muted-foreground">{item.school}{item.location && ` · ${item.location}`}</p><p className="mt-2 text-sm text-foreground/75">{item.result}</p></div></div></article>)}</div>
+            <aside className="glass h-fit rounded-2xl p-6">
+              <h3 className="mb-5 text-xl font-bold text-gradient">Certifications</h3>
+              <ul className="space-y-4">{portfolio.certifications.map((certification) => <li key={certification.title} className="border-b border-white/10 pb-4 last:border-0 last:pb-0">
+                <h4 className="font-semibold text-foreground">{certification.title}</h4>
+                {certification.issuer && <p className="mt-1 text-xs text-muted-foreground">{certification.issuer} · {certification.date}</p>}
+                {certification.file && <Link href={`/certificates/${certification.file}`} prefetch={false} target="_blank" rel="noopener noreferrer" aria-label={`View ${certification.title} certificate`} className="mt-2 inline-flex items-center gap-1 text-sm font-medium text-primary transition hover:text-accent">View certificate <ArrowUpRight className="h-4 w-4" /></Link>}
+              </li>)}</ul>
+            </aside>
+          </div>
           <p className="mt-7 text-center text-sm text-muted-foreground">Languages: {portfolio.languages.join(' · ')} <span className="mx-3 text-primary">•</span> Interests: {portfolio.interests.join(' · ')}</p>
         </div>
       </section>
