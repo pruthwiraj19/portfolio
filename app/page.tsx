@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import {
   ArrowDown,
@@ -22,6 +23,7 @@ import {
 import AnimatedBackground from '@/components/AnimatedBackground';
 import SectionTransition from '@/components/SectionTransition';
 import { portfolio } from '@/data/portfolio';
+import portrait from '@/public/pruthwiraj-portrait.png';
 
 const navigation = [
   { label: 'Home', id: 'hero' },
@@ -97,7 +99,9 @@ export default function Home() {
           <motion.div className="mx-auto mb-8 w-fit" initial={{ opacity: 0, y: 24, scale: .95 }} animate={{ opacity: 1, y: 0, scale: 1 }} transition={{ duration: .8 }}>
             <div className="relative">
               <div className="absolute -inset-2 rounded-full bg-gradient-to-br from-primary/40 via-accent/25 to-primary/15 blur-lg" />
-              <div className="glass panel-shift relative grid h-32 w-32 place-items-center overflow-hidden rounded-full border border-primary/40 text-5xl font-bold text-gradient sm:h-48 sm:w-48 sm:text-7xl" aria-label="Pruthwiraj Deshmukh initials">PD</div>
+              <div className="glass panel-shift relative h-32 w-32 overflow-hidden rounded-full border border-primary/40 sm:h-48 sm:w-48">
+                <Image src={portrait} alt="Portrait of Pruthwiraj Deshmukh" fill priority sizes="(min-width: 640px) 192px, 128px" className="scale-105 object-cover object-[center_12%]" />
+              </div>
             </div>
           </motion.div>
           <motion.p className="section-label mx-auto mb-3 text-xs tracking-[.12em] text-primary/90 sm:text-sm" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .6, delay: .1 }}>MMS Marketing · WeSchool 2025–27</motion.p>
