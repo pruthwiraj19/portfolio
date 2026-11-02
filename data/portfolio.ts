@@ -73,6 +73,18 @@ export const portfolio = {
         'Researched the daily experience of students and translated pain points around comfort, storage and ventilation into an ergonomic, smart and eco-friendly prototype.',
       outcomes: ['Primary research with 50+ students', '1st rank in the GCL competition'],
     },
+    {
+      number: '04',
+      tag: 'Distribution strategy · Supply chain',
+      title: 'Rural Distribution & Sub-Stockist Business Case',
+      organization: 'WeSchool · Distribution, Logistics & Supply Chain Management',
+      description:
+        'Designed a rural hub-and-spoke distribution network targeting 150 retailers across 16 villages in Talwada, Beed.',
+      outcomes: [
+        'Developed a 3-year financial feasibility model evaluating investment requirements, gross margins, working capital and distribution risks.',
+        'Conducted risk and sensitivity analysis to assess distribution viability and operational efficiency under different sales scenarios.',
+      ],
+    },
   ],
   education: [
     {
